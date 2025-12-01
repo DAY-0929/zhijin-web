@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜀锦 - 中国四大名锦之首</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background-color: #f8f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 导航栏 */
+        .nav {
+            background-color: #d4af37;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        .back-btn {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #fff;
+            color: #d4af37;
+        }
+        /* 头部轮播图 */
+        .header-img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+        /* 主体内容 */
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .title {
+            font-size: 32px;
+            color: #8b4513;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0e6d2;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 22px;
+            color: #d4af37;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 22px;
+            background-color: #d4af37;
+            margin-right: 10px;
+        }
+        .content {
+            font-size: 16px;
+            text-indent: 2em;
+            margin-bottom: 20px;
+        }
+        .img-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .detail-img {
+            width: 31%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .detail-img:hover {
+            transform: scale(1.03);
+        }
+        /* 手艺人故事 */
+        .artisan-card {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background-color: #faf6ed;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .artisan-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #d4af37;
+        }
+        .artisan-info h4 {
+            font-size: 18px;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+        /* 购买链接 */
+        .buy-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #f0e6d2;
+            border-radius: 8px;
+        }
+        .buy-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin-top: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(212,175,55,0.3);
+        }
+        .buy-btn:hover {
+            background-color: #c29a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(212,175,55,0.4);
+        }
+        /* 页脚 */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .detail-img {
+                width: 48%;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            .title {
+                font-size: 26px;
+            }
+            .detail-img {
+                width: 100%;
+                height: 200px;
+            }
+            .artisan-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">锦绣中华</a>
+            <a href="index.html" class="back-btn">返回首页</a>
+        </div>
+    </nav>
+
+    <!-- 头部图片 -->
+    <img src="https://images.unsplash.com/photo-1628899436201-50d8cb234f25?q=80&w=1935&auto=format&fit=crop" alt="蜀锦全景图" class="header-img">
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <h1 class="title">蜀锦 - 千年锦缎，川蜀瑰宝</h1>
+
+        <!-- 蜀锦历史 -->
+        <div class="section">
+            <h2 class="section-title">蜀锦历史</h2>
+            <p class="content">蜀锦，中国四大名锦之首，起源于春秋战国时期的古蜀国，距今已有两千多年历史。汉代时蜀锦成为朝廷贡品，被誉为“东方瑰宝”，其“经锦”工艺独步天下，远销中亚、欧洲，成为丝绸之路的重要贸易商品。</p>
+            <p class="content">唐代是蜀锦的鼎盛时期，花色品种多达数十种，“陵阳公样”等经典纹样流传至今；明清时期，蜀锦融入江南织锦技艺，形成了“锦缎华丽、纹样繁复、色彩明艳”的独特风格，成为皇室御用织物和贵族珍藏。</p>
+            <div class="img-group">
+                <img src="https://images.unsplash.com/photo-1585060544647-8482e1a7a3f8?q=80&w=1887&auto=format&fit=crop" alt="汉代蜀锦残片" class="detail-img">
+                <img src="https://images.unsplash.com/photo-1618331878703-92b20c024881?q=80&w=1935&auto=format&fit=crop" alt="唐代蜀锦纹样" class="detail-img">
+                <img src="https://images.unsplash.com/photo-1596443686284-3a443902c220?q=80&w=1887&auto=format&fit=crop" alt="明清蜀锦藏品" class="detail-img">
+            </div>
+        </div>
+
+        <!-- 制作过程 -->
+        <div class="section">
+            <h2 class="section-title">制作过程</h2>
+            <p class="content">蜀锦制作工艺复杂，全程需纯手工完成，从准备到成品需历经数十道工序，耗时数月甚至数年。核心工序包括：选丝、染色、经线准备、纬线搭配、织造、整理等，其中“通经断纬”的提花技艺是蜀锦的精髓所在。</p>
+            <p class="content">首先选用优质桑蚕丝，经煮练、染色后，按纹样要求排列经线（最多可达数千根）；织造时，织工需同时操作织机的经轴和纬线，通过提花装置精准控制每一根丝线的起落，将纹样立体呈现于锦缎之上，一件精品蜀锦的织造密度可达每平方厘米数百根丝线。</p>
+            <div class="img-group">
+                <img src="https://images.unsplash.com/photo-1578303553709-41927125a16a?q=80&w=1887&auto=format&fit=crop" alt="蜀锦选丝染色" class="detail-img">
+                <img src="https://images.unsplash.com/photo-1592830195123-629d4191963c?q=80&w=1887&auto=format&fit=crop" alt="蜀锦织造过程" class="detail-img">
+                <img src="https://images.unsplash.com/photo-1604544758590-91316d190a9a?q=80&w=1887&auto=format&fit=crop" alt="蜀锦成品整理" class="detail-img">
+            </div>
+        </div>
+
+        <!-- 手艺人故事 -->
+        <div class="section">
+            <h2 class="section-title">手艺人故事</h2>
+            <div class="artisan-card">
+                <img src="https://images.unsplash.com/photo-1566616082416-470f737a532e?q=80&w=1887&auto=format&fit=crop" alt="蜀锦传承人李阿姨" class="artisan-img">
+                <div class="artisan-info">
+                    <h4>李桂英 - 蜀锦非遗传承人</h4>
+                    <p>今年62岁的李桂英，是蜀锦国家级非物质文化遗产传承人，从16岁起跟随母亲学习蜀锦织造，至今已有46年工龄。她见证了蜀锦从“濒临失传”到“重焕生机”的全过程。</p>
+                    <p>上世纪80年代，机器织锦冲击市场，传统蜀锦作坊纷纷倒闭，李桂英坚持守在织机前，花费10年时间复原了“陵阳公样”“宝相花”等失传纹样。近年来，她通过直播教学、开设非遗课堂，培养了30多名年轻传承人，让蜀锦走进了年轻人的生活。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 购买链接 -->
+        <div class="section buy-section">
+            <h2 class="section-title">匠心好物</h2>
+            <p>以下为李桂英大师监制的蜀锦精品，每一件均为纯手工织造，承载千年技艺与温度</p>
+            <a href="#" class="buy-btn">进入蜀锦专属购买通道</a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>锦绣中华 © 2024 版权所有 | 专注传统织锦文化传承与推广</p>
+    </footer>
+</body>
+</html>

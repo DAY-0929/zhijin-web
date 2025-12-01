@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦绣中华 - 中国传统织锦文化展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background-color: #f8f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 导航栏 */
+        .nav {
+            background-color: #d4af37;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            color: #f0e6d2;
+            text-decoration: underline;
+        }
+        /* 头部横幅 */
+        .banner {
+            width: 100%;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoom 15s infinite alternate;
+        }
+        .banner-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .banner-title {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        .banner-desc {
+            font-size: 18px;
+            color: #f0e6d2;
+            max-width: 800px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        /* 织锦展示区 */
+        .section {
+            width: 90%;
+            margin: 60px auto;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 32px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            display: inline-block;
+            border-bottom: 2px solid #d4af37;
+        }
+        .brocade-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .brocade-card {
+            width: 23%;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+        .brocade-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .brocade-card:hover .card-img {
+            transform: scale(1.05);
+        }
+        .card-info {
+            padding: 20px;
+        }
+        .card-name {
+            font-size: 20px;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        /* 页脚 */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .brocade-card {
+                width: 48%;
+            }
+        }
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 36px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .brocade-card {
+                width: 100%;
+            }
+            .card-img {
+                height: 250px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">锦绣中华</a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">首页</a>
+                <a href="#" class="nav-link">织锦文化</a>
+                <a href="#" class="nav-link">手艺人故事</a>
+                <a href="#" class="nav-link">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <div class="banner">
+        <img src="https://images.unsplash.com/photo-1585543805890-6007e943ba97?q=80&w=1935&auto=format&fit=crop" alt="织锦横幅" class="banner-img">
+        <div class="banner-mask">
+            <h1 class="banner-title">锦绣中华 · 千年织锦文化</h1>
+            <p class="banner-desc">汇集四大名锦，展现传统工艺之美，传承指尖上的非遗文化，让千年锦缎焕发新生</p>
+        </div>
+    </div>
+
+    <!-- 织锦展示区 -->
+    <div class="section">
+        <h2 class="section-title">四大名锦展示</h2>
+        <div class="brocade-container">
+            <!-- 蜀锦卡片（链接到详情页） -->
+            <a href="shujin-detail.html" class="brocade-card">
+                <img src="https://images.unsplash.com/photo-1628899436201-50d8cb234f25?q=80&w=1935&auto=format&fit=crop" alt="蜀锦" class="card-img">
+                <div class="card-info">
+                    <h3 class="card-name">蜀锦</h3>
+                    <p class="card-desc">中国四大名锦之首，起源于古蜀国，以华丽纹样、精湛工艺闻名，丝绸之路的重要瑰宝。</p>
+                </div>
+            </a>
+
+            <!-- 云锦卡片 -->
+            <a href="#" class="brocade-card">
+                <img src="https://images.unsplash.com/photo-1596443686284-3a443902c220?q=80&w=1887&auto=format&fit=crop" alt="云锦" class="card-img">
+                <div class="card-info">
+                    <h3 class="card-name">云锦</h3>
+                    <p class="card-desc">南京特产，因“锦纹如云”得名，皇室御用织锦，工艺繁复，被誉为“寸锦寸金”。</p>
+                </div>
+            </a>
+
+            <!-- 宋锦卡片 -->
+            <a href="#" class="brocade-card">
+                <img src="https://images.unsplash.com/photo-1585060544647-8482e1a7a3f8?q=80&w=1887&auto=format&fit=crop" alt="宋锦" class="card-img">
+                <div class="card-info">
+                    <h3 class="card-name">宋锦</h3>
+                    <p class="card-desc">起源于宋代，以素雅纹样、温润色泽著称，兼具实用与审美，是文人雅士的首选织物。</p>
+                </div>
+            </a>
+
+            <!-- 壮锦卡片 -->
+            <a href="#" class="brocade-card">
+                <img src="https://images.unsplash.com/photo-1618331878703-92b20c024881?q=80&w=1935&auto=format&fit=crop" alt="壮锦" class="card-img">
+                <div class="card-info">
+                    <h3 class="card-name">壮锦</h3>
+                    <p class="card-desc">壮族传统织锦，以鲜明色彩、几何纹样为特色，承载着壮族的历史与民俗文化。</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>锦绣中华 © 2024 版权所有 | 专注传统织锦文化传承与推广</p>
+    </footer>
+</body>
+</html>
